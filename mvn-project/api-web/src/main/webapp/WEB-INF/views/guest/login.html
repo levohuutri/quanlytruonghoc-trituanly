@@ -1,0 +1,40 @@
+
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring3-3.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Đăng nhập</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body class="main-body">
+        <div class="panel panel-default main-container">
+            <div class="panel-body">
+                <form accept-charset="UTF-8" role="form" method="POST" th:action="@{/guest/check}">
+                    <fieldset>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                <input class="form-control" placeholder="Tên đăng nhập" name="j_username" type="Tên đăng nhập"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                                <input class="form-control" placeholder="Mật khẩu" name="j_password" type="password"  />
+                            </div>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input name="remember" type="checkbox" value="Ghi Nhớ"/> Ghi nhớ
+                            </label>
+                        </div>
+                        <input class="btn btn-lg btn-success btn-block" type="submit" value="Đăng nhập"/>
+                    </fieldset>
+                </form> 
+            </div>
+        </div>
+        <link href="" th:href="@{/media/css/guest/guest.css}" rel="stylesheet" media="screen" />
+        <script th:src="@{/media/js/guest/home.js}" type="text/javascript"/>
+    </body>
+</html>

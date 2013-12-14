@@ -1,0 +1,110 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 14, 2013, 9:09:23 PM
+    Author     : linhly
+*/
+.news-title {
+    font-weight: 600;
+}
+
+.padding-right-5 {
+    padding-right: 5px;
+}
+.chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+    min-height: 30px;
+}
+.align_left{
+    text-align:left;
+}
+.align_right{
+    text-align:right;
+}
+.float_right{
+    float: right;
+}
+.float_left{
+    float: left;
+}
+.margin_button_bottom{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.col-md-2 {
+    width: 10%;
+}    
+
+.inner_form{
+    margin: 0 15%;
+}
+
+.margin-top {
+    margin-top: -11px;
+}
+
+.padding-100 {
+    margin-left: -70px;
+}
+
+.icon-action{
+    margin: 0 10px;
+}
+.invisible{
+    display: none;
+}
+
+.padding-10 {
+    margin-left: -15px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+}
+
+.select_label{    
+    padding-right: 0;
+    padding-bottom: 30px;
+}
+.strong_text{
+    font-weight: bold;
+}
+
+.align_center{
+    text-align: center;
+}
+
+.min_width_button_modal{
+    min-width: 100px;
+}
+.bs-docs-example:after{
+    content: none !important;
+}
+
+.radio_khoiLop{
+    width: 50%;
+}
+.message_modal{
+    margin-bottom: 10px;
+}
+
+.margin_label_right{
+    margin-right: 10px;
+}
+
+/*Css for modal*/
+
+.main-container {
+    margin-bottom: 5px;
+/*    background-color: 	#FEFEFE;
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";*/
+}
+.main-body {
+    font-family: "segoe ui";
+    /*background-color: #FFFFFF;*/
+}

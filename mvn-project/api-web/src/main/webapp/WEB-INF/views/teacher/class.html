@@ -1,0 +1,70 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring3-3.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:include="teacher/template :: header" />
+    <body>
+        <div class="container">
+            <div th:substituteby="teacher/template :: nav" />   
+            <!--<a th:href="@{/staff/management/students/new}" class="btn btn-primary float_right margin_button_bottom">Thêm Học Sinh Mới</a>-->
+            <div class="clearfix"></div>
+            <table id="table" style="table-layout: fixed; word-wrap: break-word;">
+                <thead>
+                    <tr>                        
+                        <th rowspan="2">Lớp Học</th>
+                        <th rowspan="2">Môn Học</th>
+                        <th colspan="5">Điểm</th>
+                    </tr>
+                    <tr>
+                        <th>Miệng</th>
+                        <th>15 phút</th>
+                        <th>1 tiết</th>
+                        <th>Giữa kỳ </th>
+                        <th>Cuối kỳ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:id="${phancong.getid()}" align="center" th:each="phancong: ${listPhanCong}">                        
+                        <td th:text="${phancong.getChiTietChuyenMon().getChiTietMonHoc().getKhoiLop().gettenKhoiLop()} + ${phancong.getLopHoc().gettenLopHoc()}"/>
+                        <td th:text="${phancong.getChiTietChuyenMon().getChiTietMonHoc().getMonHoc().gettenMonHoc()}"/>
+                        <td>
+                            <a th:href="@{'/teacher/class/'+ ${phancong.getid()} + '/ktmieng'}" id="mieng" title="Chấm điểm"><i class="icon-pencil icon-action"></i></a>                      
+                        </td>
+                        <td>
+                            <a th:href="@{'/teacher/class/'+ ${phancong.getid()} + '/kt15'}" id="15" title="Chấm điểm"><i class="icon-pencil icon-action"></i></a>                      
+                        </td>
+                        <td>
+                            <a th:href="@{'/teacher/class/'+ ${phancong.getid()} + '/kt1tiet'}" id="tiet" title="Chấm điểm"><i class="icon-pencil icon-action"></i></a>                      
+                        </td>
+                        <td>
+                            <a th:href="@{'/teacher/class/'+ ${phancong.getid()} + '/ktgiuaky'}" id="giuaky" title="Chấm điểm"><i class="icon-pencil icon-action"></i></a>                      
+                        </td>
+                        <td>
+                            <a th:href="@{'/teacher/class/'+ ${phancong.getid()} + '/ktcuoiky'}" id="cuoiky" title="Chấm điểm"><i class="icon-pencil icon-action"></i></a>                      
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div th:include="teacher/template :: footer"></div>
+        </div>	
+        <!--          HTML for modal popup-->
+        <!-- modal content -->
+        <!--        <div id='confirm'>
+                        <div class='header'><span>Confirm Delete Student</span></div>
+                        <div class='message'></div>
+                        <div class='buttons'>
+                        <div class='no simplemodal-close'>No</div><div class='yes'>Yes</div>
+                        </div>
+                </div>-->
+        <!-- preload the images -->
+        <div style='display:none'>
+            <img src='img/confirm/header.gif' alt='' />
+            <img src='img/confirm/button.gif' alt='' />
+        </div>
+        <script src="" th:src="@{/media/js/jquery.simplemodal.js}"></script>
+        <script src="" th:src="@{/media/js/teacher_module/class.js}"></script>
+
+        <script th:inline="javascript">
+//             var chamDiemURL = /*[[@{/teacher/class/}]]*/ "chamDiem";
+        </script>    
+    </body>
+</html>
